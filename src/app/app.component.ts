@@ -12,6 +12,7 @@ import 'style-loader!./app.component.scss';
 export class AppComponent {
 
 	places: any[];
+	errMessage: string ;
 
   constructor(
     private _searchService : SearchService
@@ -19,18 +20,18 @@ export class AppComponent {
   }
 
   keywordChange(keyword: string) {
-
-  	console.log(keyword, keyword.length);
+  	// console.log(keyword, keyword.length);
     
+    // Only perform search when at least 3 characters
     if (keyword.length >= 3) {
     	this._searchService.getResults(keyword)
         .subscribe(x => {
         	this.places = x.json().response.groups['0'].items;
-          console.log(this.places);
-
+          this.errMessage = '';
 
         }, error => {
-        	console.log('no result')
+        	console.log('no result');
+        	this.errMessage = `Sorry, there's no result match your search`;
         });
     }
     
