@@ -5,5 +5,10 @@
 </div>
 
 <ul>
-	<li></li>
+	<li *ngFor="let place of places">
+      <a href="{{place.venue.url}}" target="_blank">
+      	<h3>{{place.venue.name}}</h3>
+      	<p>{{place.venue.rating}}</p>
+      </a>
+  </li>
 </ul>

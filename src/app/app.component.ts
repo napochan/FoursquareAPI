@@ -11,6 +11,8 @@ import 'style-loader!./app.component.scss';
 
 export class AppComponent {
 
+	places: any[];
+
   constructor(
     private _searchService : SearchService
     ) {
@@ -23,8 +25,8 @@ export class AppComponent {
     if (keyword.length >= 3) {
     	this._searchService.getResults(keyword)
         .subscribe(x => {
-
-          console.log(x);
+        	this.places = x.json().response.groups['0'].items;
+          console.log(this.places);
 
 
         }, error => {
