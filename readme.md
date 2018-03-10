@@ -1,9 +1,15 @@
 # Project Documentation
 
 This document is to provide information about the project
+ - Approach
  - required software
  - how to run the project
- 
+
+## Approach
+Use Angular 4 and webpack.
+Create an API service to manage AJAX call and seperate it from the main component.
+Only start searching after at least 3 characters.
+Conditionally return recommended venues with name and rating or display no result message.
 
 ## Installing
 ### Required software
