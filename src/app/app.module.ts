@@ -2,11 +2,13 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Http } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 
 import { AppComponent }            from './app.component';
 import { AppRoutingModule }        from './app-routing.module';
+import { SearchService } from './search.service';
+
 
 
 
@@ -14,6 +16,7 @@ import { AppRoutingModule }        from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
@@ -21,8 +24,7 @@ import { AppRoutingModule }        from './app-routing.module';
   declarations: [
     AppComponent
   ],
-  providers: [
-  ],
+  providers: [ SearchService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
