@@ -23,8 +23,6 @@ export class SearchService {
   public SearchResult: Observable<any>;
   private _lastSearchResult : Subject<any>;
 
-  @Input() keyword: string;
-
 
   constructor(private _http: Http) {
     this._lastSearchResult = new Subject<any>();
@@ -33,12 +31,12 @@ export class SearchService {
 
 
 
-  getResults() {
+  getResults(keyword: string) {
     return this._http.get(endPoint +
       '?client_id=' + clientID +
       '&client_secret=' + clientSecret +
-      '&v=20170801' +
-      '&near=' + 'London')
+      '&v=20180310' +
+      '&near=' + keyword)
       .map(x => {
         let response = x.json();
         //let searchResult : any = this.getResults();
