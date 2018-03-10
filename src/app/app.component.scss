@@ -76,12 +76,12 @@ body {
     display: block;
     overflow: hidden;
     margin: 10px;
+    color: $text-colour;
+    text-decoration: none;
 
     &:hover,
-    &:focus,
-    &:visited,
-    &:link {
-      color: $text-colour;
+    &:focus {
+      text-decoration: underline;
     }
 
     h3, p {
