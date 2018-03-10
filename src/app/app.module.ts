@@ -6,7 +6,6 @@ import { Http, HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 
 import { AppComponent }            from './app.component';
-import { AppRoutingModule }        from './app-routing.module';
 import { SearchService } from './search.service';
 
 
@@ -17,10 +16,8 @@ import { SearchService } from './search.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
     BrowserAnimationsModule
   ],
- 
   declarations: [
     AppComponent
   ],
@@ -28,7 +25,7 @@ import { SearchService } from './search.service';
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
-  constructor(router: Router) {
+  constructor() {
     
   }
 }
