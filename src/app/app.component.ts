@@ -20,7 +20,6 @@ export class AppComponent {
   }
 
   keywordChange(keyword: string) {
-  	// console.log(keyword, keyword.length);
     
     // Only perform search when at least 3 characters
     if (keyword.length >= 3) {
@@ -30,7 +29,7 @@ export class AppComponent {
           this.errMessage = '';
 
         }, error => {
-        	console.log('no result');
+        	// console.log('no result');
         	this.errMessage = `Sorry, there's no result match your search`;
         });
     }
