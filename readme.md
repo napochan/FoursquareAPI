@@ -11,6 +11,8 @@ Create an API service to manage AJAX call and seperate it from the main componen
 Only start searching after at least 3 characters.
 Conditionally return recommended venues with name and rating or display no result message.
 
+Developed on Mac Chrrome, tested on Mac Safari and Firefox.
+
 ## Installing
 ### Required software
 **NPM** comes as a part of **Node.js**. To install **Node.js** follow the instructions located here:
