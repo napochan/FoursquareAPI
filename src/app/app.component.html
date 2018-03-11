@@ -1,7 +1,9 @@
 <div class="app-container">
+	<h1>Whitbread Tech Test</h1>
 
+	<h2>Search recommended venues by location name or postcode</h2>
 	<div class="search-container">
-		<label for="search-input" class="offscreen">Enter a place to search</label>
+		<label for="search-input" class="offscreen">Enter a place or postcode to search</label>
 		<input type="text" class="search-input" id="search-input" placeholder="Search" [(ngModel)]="keyword" (keyup)="keywordChange(keyword)">
 		<button class="search-bt" type="submit">Search</button>
 	</div>
